@@ -33,10 +33,10 @@ public final class CargaInicial {
         productoService.crear("Flan casero", "Flan con dulce de leche",
                 2500.0, 25, "flan.jpg", true, postres.getId());
 
-        usuarioService.crear("Juan", "Perez", "juan.perez@example.com",
-                "1130000001", "1234", Rol.ADMIN);
-        usuarioService.crear("Ana", "Gomez", "ana.gomez@example.com",
-                "1130000002", "1234", Rol.USUARIO);
+        usuarioService.crear("Juan", "Santostefano", "juan@gmail.com",
+                "0113216547", "1234", Rol.ADMIN);
+        usuarioService.crear("Gabriel", "Santostefano", "gabriel@gmail.com",
+                "3431234567", "1234", Rol.USUARIO);
 
         System.out.println("Datos de ejemplo cargados (3 categorias, 5 productos, 2 usuarios).");
     }
