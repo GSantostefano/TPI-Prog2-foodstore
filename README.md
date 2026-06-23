@@ -15,7 +15,7 @@ validaciones y una arquitectura en capas.
 
 - **Repositorio en GitHub:** https://github.com/GSantostefano/TPI-Prog2-foodstore
 - **Documentación (PDF):** https://drive.google.com/file/d/1rql0fRKGGBBdAR4yTj44Q6x_ZyPpuVoD/view?usp=drive_link
-- **Documentación (Video):**
+- **Documentación (Video):** https://drive.google.com/file/d/1zGBo--KEUnKcwlo32LUVCO9izx-scDZg/view?usp=drive_link
 
 
 ---
