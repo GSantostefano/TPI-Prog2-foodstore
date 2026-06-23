@@ -8,6 +8,7 @@ import integrado.prog2.entities.Usuario;
 import integrado.prog2.enums.Estado;
 import integrado.prog2.enums.FormaPago;
 import integrado.prog2.exception.EntidadNoEncontradaException;
+import integrado.prog2.exception.FoodStoreException;
 import integrado.prog2.exception.ValidacionException;
 import integrado.prog2.interfaces.Calculable;
 import integrado.prog2.repository.Repositorio;
@@ -74,7 +75,7 @@ public class PedidoService {
             pedidoRepo.guardar(pedido);
             return pedido;
 
-        } catch (RuntimeException e) {
+        } catch (FoodStoreException e) {
             revertirStock(productosDescontados, cantidadesDescontadas);
             throw e;
         }

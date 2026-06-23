@@ -151,7 +151,7 @@ public class Pedido extends Base implements Calculable {
     public void deleteDetallePedidoByProducto(Producto producto) {
         DetallePedido detalle = findDetallePedidoByProducto(producto);
         if (detalle != null) {
-            detalles.remove(detalle);
+            detalle.setEliminado(true);
             calcularTotal();
         }
     }

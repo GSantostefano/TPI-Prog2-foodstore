@@ -1,1 +1,10 @@
-build/echo dist/echo out/echo nbproject/private/echo *.classecho *.jar
+build/
+dist/
+out/
+nbproject/private/
+nbbuild/
+*.class
+*.jar
+*.log
+.DS_Store
+Thumbs.db

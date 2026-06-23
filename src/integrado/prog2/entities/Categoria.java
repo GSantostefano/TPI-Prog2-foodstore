@@ -1,5 +1,6 @@
 package integrado.prog2.entities;
 
+import integrado.prog2.exception.ValidacionException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -22,7 +23,10 @@ public class Categoria extends Base {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        if (!textoValido(nombre)) {
+            throw new ValidacionException("El nombre de la categoria no puede estar vacio.");
+        }
+        this.nombre = nombre.trim();
     }
 
     public String getDescripcion() {
@@ -30,7 +34,10 @@ public class Categoria extends Base {
     }
 
     public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+        if (!textoValido(descripcion)) {
+            throw new ValidacionException("La descripcion de la categoria no puede estar vacia.");
+        }
+        this.descripcion = descripcion.trim();
     }
 
     public List<Producto> getProductos() {
@@ -52,6 +59,10 @@ public class Categoria extends Base {
 
     public long contarProductosActivos() {
         return productos.stream().filter(p -> !p.isEliminado()).count();
+    }
+
+    private static boolean textoValido(String texto) {
+        return texto != null && !texto.trim().isEmpty();
     }
 
     @Override
